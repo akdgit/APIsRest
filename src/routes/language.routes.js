@@ -4,6 +4,10 @@ import { methods as languagesController } from "../controllers/languages.control
 const router = Router();
 
 router.get("/", languagesController.getLanguages);
+router.get("/:id", languagesController.getLanguage);
+router.post("/", languagesController.addLanguage);
+router.delete("/:id", languagesController.deleteLanguage);
+router.put("/:id", languagesController.updateLanguage);
 
 /*
 router.get("/", (req, res) => {
